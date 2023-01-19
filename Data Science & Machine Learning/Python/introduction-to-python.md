@@ -76,7 +76,7 @@ You can also comment out even multiple lines of code to prevent Python from exec
 print("Hi there!")
 ```
 
-you can add a multi-line string (triple quotes) in your code, and place your comment inside it:
+You can add a multi-line string (triple quotes) in your code, and place your comment inside it:
 
 ```python
 """
