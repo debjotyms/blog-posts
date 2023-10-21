@@ -26,7 +26,7 @@ import numpy as np
 
 ### Convert a 1D list to a 1D array using NumPy:
 
-![Untitled](resources/numPy/Untitled.png)
+![resources/numPy/Untitled.png](https://github.com/debjotyms/blog-posts/blob/main/Data%20Science%20&%20Machine%20Learning/Data%20Manipulation%20and%20Visualization/resources/numPy/Untitled%201.png?raw=true)
 
 ### Convert a 2D list to a 2D array:
 
