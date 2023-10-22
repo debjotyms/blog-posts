@@ -19,7 +19,7 @@ A conceptual ER diagram uses six standard symbols.
 5. **Multivalued attributes** are attributes that can have more than one value.
 6. **Weak relationships** are the connections between a weak entity and its parent.
 
-![Untitled](002%20ER%20Diagram%2079d9f8b1dfe04d09aaf723299c4e9c76/Untitled.png)
+![ER Diagram Notations](https://github.com/debjotyms/blog-posts/blob/main/Database%20Systems/resources/002%20ER%20Diagram/1_er_diagram_notations.png?raw=true)
 
 ### Physical ER Diagrams
 
@@ -27,10 +27,10 @@ Physical diagram models are more granular, showing the processes necessary for a
 
 Each entity is represented as a table, with each **field** acting as an attribute of the entity containing it.
 
-![Untitled](002%20ER%20Diagram%2079d9f8b1dfe04d09aaf723299c4e9c76/Untitled%201.png)
+![Physical ER Diagram](https://github.com/debjotyms/blog-posts/blob/main/Database%20Systems/resources/002%20ER%20Diagram/2_physical_er_diagram.png?raw=true)
 
 Entities are connected via a system of **notation** called **crow’s foot notation**. The styling of the endpoint of each line distinguishes the relationship.
 
-![Untitled](002%20ER%20Diagram%2079d9f8b1dfe04d09aaf723299c4e9c76/Untitled%202.png)
+![Crow's Foot Notation](https://github.com/debjotyms/blog-posts/blob/main/Database%20Systems/resources/002%20ER%20Diagram/3_crow's_foot_notation.png?raw=true)
 
 The types of relationships of an ER diagram depend on the entity’s interactions with the other elements. Relationships can be one-to-one (1:1) or one-to-many (1:N). In some instances, the relationship will include many to many (N:N).
