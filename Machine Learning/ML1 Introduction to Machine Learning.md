@@ -19,19 +19,19 @@ Now we will see some examples of machine learning that we use in our daily life 
 
 Smartphone assistants like Apple Siri use **machine learning** to **recognize speech, answer questions** and do other smart things. Assistants like **Siri** and **Google Assistant** are powered by automatic speech recognition and **Natural Language Processing (NLP)**.
 
-![https://res.cloudinary.com/practicaldev/image/fetch/s--DGijk2im--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mbragqta3hwmlcvxxcex.png](https://res.cloudinary.com/practicaldev/image/fetch/s--DGijk2im--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mbragqta3hwmlcvxxcex.png)
+![AI Assistant Siri](https://github.com/debjotyms/blog-posts/blob/main/Machine%20Learning/resources/ML1.%20Introduction%20to%20Machine%20Learning/1_siri.jpeg?raw=true)
 
 ### Self Driving Car
 
 One of the most exciting and cutting-edge uses of machine learning algorithms is in autonomous vehicles. Self driving car can significantly reduce traffic, and most importantly they can reduce road accidents
 
-![https://res.cloudinary.com/practicaldev/image/fetch/s--ghkBh5hp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b5i6wk1do1c1w5lvmv4n.png](https://res.cloudinary.com/practicaldev/image/fetch/s--ghkBh5hp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b5i6wk1do1c1w5lvmv4n.png)
+![Self Driving Car from Tesla](https://github.com/debjotyms/blog-posts/blob/main/Machine%20Learning/resources/ML1.%20Introduction%20to%20Machine%20Learning/2_tesla_car.jpeg?raw=true)
 
 ### Spam or Fraud Detection
 
 Machine learning is used in every spam filter, such as in Gmail.
 
-![https://res.cloudinary.com/practicaldev/image/fetch/s--2XpNIGE7--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gwfqv3fbqb5xxcov9czh.png](https://res.cloudinary.com/practicaldev/image/fetch/s--2XpNIGE7--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gwfqv3fbqb5xxcov9czh.png)
+![Gmail Spam Detection](https://github.com/debjotyms/blog-posts/blob/main/Machine%20Learning/resources/ML1.%20Introduction%20to%20Machine%20Learning/3_gmail_spam.png?raw=true)
 
 ML systems are also used by credit card companies and banks to automatically detect fraudulent behavior.
 
