@@ -1,6 +1,4 @@
-# Kernel Based Virtualization
-
-Tags: Ubuntu
+# Getting Started with KVM (Kernel-based Virtual Machine) on Ubuntu 22.04
 
 # Introduction
 
@@ -22,13 +20,13 @@ You can use other Linux distributions that support KVM. It’s totally up to you
 
 Run `sudo apt update` before installing KVM. This command is like checking for updates on your computer. It makes sure your computer knows about the newest versions of software available to install. This helps keep your system secure by ensuring you get the latest security fixes and makes sure that when you install new software, everything it needs is there and up to date. It's an important step before installing or updating anything on your system.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled.png)
+![Update Ubuntu](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/update_ubuntu.png?raw=true)
 
 ### 1.2: Check if Virtualization is Enabled
 
 To verify whether your CPU supports KVM virtualization, you can run the following command:
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%201.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/check_virtualization.png?raw=true)
 
 If the output is greater than 0, then congratulations! You can use KVM. If Virtualization is not enabled, be sure to enable the virtualization feature in your system’s BIOS settings.
 
@@ -36,17 +34,17 @@ If the output is greater than 0, then congratulations! You can use KVM. If Virtu
 
 In addition, you can verify if KVM virtualization is enabled by running the following command:
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%202.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/check_kvm.png?raw=true)
 
 If not, then install specific package using the returned command after running `kvm-ok`. After that, rerun the `kvm-ok` and if everything is okay, you will get this output. 
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%203.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/check_kvm_2.png?raw=true)
 
 ### 1.4: Install KVM on Ubuntu 22.04
 
 Now the real part. Let’s Install KVM. To do that, run the command and everything will be installed automatically.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%204.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/install_kvm.png?raw=true)
 
 ### 1.5: Enable & Start Virtual Deamon
 
@@ -54,11 +52,11 @@ In this step, we will run 3 commands. First of all, using the `sudo systemctl en
 
 The second command  `sudo systemctl start libvirtd` will start the previously enabled `libvirtd` daemon. Lastly, using the `sudo systemctl status libvirtd` we can verify whether our expected serviced (`libvirtd` in this case) is running as expected or not.  
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%205.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/enable_and_start_virtual_daemon.png?raw=true)
 
 After enabling and running everything perfectly, now we need to add the currently logged-in user to the `kvm` and `libvirt` groups so that they can create and manage virtual machines. The `$USER` environment variable points to the name of the currently logged-in user.  To apply this change, you need to log out and log back again.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%206.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/add_user.png?raw=true)
 
 Keep that in mind, every time you create a new use in your host machine, you have to add the user to the `kvm` and `libvirt` groups using these two commands. 
 
@@ -68,15 +66,15 @@ Till now we have done so many things. We have installed KVM, enabled the `libvir
 
 **Step 1:** Open Virtual Machine Manager and Click on the “**Create a Virtual Machine**” button.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%207.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/open_vmm.png?raw=true)
 
 **Step 2:** Create a new VM using your own configuration. First of all, you have to choose your installation media. Then allocate necessary Memory, CPU and Disk Space. After giving all the information along with your VM name, click `Finish` and you are done.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%208.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/create_vm_steps.png?raw=true)
 
 If you selected an Ubuntu ISO, you would see this installation menu after booting up your newly created virtual machine. I am not going to show you the whole process of installing Ubuntu, as it is not the goal of this blog. You will find many other tutorials all over the internet. Search for tutorials according to the operating system you are going to install on your virtual machine.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%209.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/install_ubuntu.png?raw=true)
 
 # 3. Create a VM Using `virt-install` (CLI)
 
@@ -104,7 +102,7 @@ You may need to adjust the values for your specific use case. Once you have cust
 
 Remember to replace `/path/to/os.iso` with the actual path to your operating system installation ISO file.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2010.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/install_ubuntu_cli.png?raw=true)
 
 After running this command, the VM will be created, and the installation process of the operating system will begin. Now again, install your desired guest OS by your own. I am not going to show you the whole process.
 
@@ -116,13 +114,13 @@ Here's how you can set up a shared folder using Samba:
 
 ### **4.1:** Install Samba on Host OS:
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2011.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/install_samba.png?raw=true)
 
 ### **4.2:** Create a directory for the shared folder
 
 In this case, I am creating a folder named `public` on my `/data/` of Host OS using the `mkdir` command. After that, I created a new file named `file2` inside that public folder. Next, set proper permissions on the public directory:
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2012.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/create_shared_folder_directory.png?raw=true)
 
 After all the commands, we have to restart `Samba` service to apply the change.
 
@@ -139,7 +137,7 @@ writable = yes
 guest ok = yes
 ```
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2013.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/smb_conf.png?raw=true)
 
 Don’t forget to replace path = `/home/debjoty/Desktop/shared-folder` with your shared folder. Also, if you're unable to save changes to the Samba configuration file (**`/etc/samba/smb.conf`**) due to permission issues, you need to use a text editor with administrative privileges. Here's how you can do it using **`sudo`**:
 
@@ -151,17 +149,17 @@ This command will open the `smb.conf` file in the Nano text editor with elevated
 
 ### 4.5: Restart Samba and Others
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2014.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/restart_samba.png?raw=true)
 
 ### 4.6: Install Samba Client on Guest OS:
 
 In order to access the Samba share, you will need to install the Samba client on the Linux system. You can install it using the following command:
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2015.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/install_samba_on_guest_os.png?raw=true)
 
 After Installing the Samba Client, run `sudo smbclient //samba-ip-address/public` . Here replace `samba-ip-address` with your Host OS IP Address.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2016.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/run_samba_client.png?raw=true)
 
 Now using the command `ls`, you can see all the files from the public folder. Try adding more files and you will see the changes here in the Guest OS as well.
 
@@ -169,19 +167,19 @@ Now using the command `ls`, you can see all the files from the public folder. Tr
 
 You can easily mount your phone by adding your device through the VMM. It's super easy! After successfully completing the process, your device will automatically unmount from the host OS and mount on the guest OS.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2017.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/connect_phone.png?raw=true)
 
 # 6. **Clone a VM using `virt-clone` (CLI)**
 
 The following example shows how to clone a guest virtual machine called "ubuntu23.10" on the default connection, automatically generating a new name and disk clone path. Notice that first time I run the command; I got an error. Because, you have to shut down your VM before cloning.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2018.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/clone_vm.png?raw=true)
 
 # 7. Add hard disks on VM (GUI)
 
 To add storage to a cloned virtual machine using Open Virtual Machine Manager, begin by opening the program and right-clicking on the cloned virtual machine, then selecting "Open." Once opened, click on the "Add Hardware" button, choose "Storage" from the list of hardware types, and click "Forward." Next, select "Disk" and proceed by clicking "Forward." opt to "Select or create custom storage" and click "Forward" again. Click on "Manage" and then "Create Volume" to set up the new storage volume. Enter the details for the first hard disk as required and click "Finish" to complete the process, ensuring the added storage is successfully integrated with the virtual machine.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2019.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/add_hdd.png?raw=true)
 
 # 8. Add hard disks on VM (CLI)
 
@@ -195,24 +193,24 @@ sudo qemu-img create -f qcow2 /path/to/extra_disk1.qcow2 20G
 
 I have created 2 different discs of 2GB size.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2020.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/add_hdd_cli.png?raw=true)
 
 ### 8.2: Attach this with VM
 
 Now attach the newly created Disk using `virtsh attach-sidk`. Don’t forget to give the file path according to your `qcow2` directory.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2021.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/add_hdd_cli_2.png?raw=true)
 
 # 9.  Migrate VM with Each Other
 
 **Step 1:** Shutdown the machine you want to migrate and identify it’s `qcow2` file location. Here, I will share `ubuntu-debjoty.qcow2` with my friend.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2022.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/migrate_1.png?raw=true)
 
 **Step 2:** Get you friends `qcow2` file through pen drive, Google Drive or any other medium. It’s a time-consuming process as we have to copy a large size file. Download it locally to your computer.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2023.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/migrate_2.png?raw=true)
 
 **Step 3:** Run the migrated VM and you are good to go.
 
-![Untitled](Kernel%20Based%20Virtualization%20d4d86688280d4369b685745a3dc7a118/Untitled%2024.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Getting%20Started%20with%20KVM%20(Kernel-based%20Virtual%20Machine)%20on%20Ubuntu%2022.04/migrate_3.png?raw=true)
