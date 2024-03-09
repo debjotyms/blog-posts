@@ -41,7 +41,7 @@ echo \
 sudo apt-get update
 ```
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled.png?raw=true)
 
 ### 1.2: Install the Docker Package
 
@@ -51,13 +51,13 @@ Write this command to install **Docker CE** (Community Edition), **Docker CE CLI
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%201.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%201.png?raw=true)
 
 ### 1.3: Run `hello-world`
 
 The "hello-world" Docker image is a very basic image used primarily for testing and demonstration purposes. When you run the "hello-world" image as a container, it simply prints a message to the console, confirming that your Docker installation is working correctly.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%202.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%202.png?raw=true)
 
 When we learn a programming language for the first time, we print `Hello, world!` This image is also the first thing users try after installing Docker to verify that everything is set up properly. It's also commonly used in tutorials and documentation to demonstrate how to run a Docker container.
 
@@ -69,19 +69,19 @@ We have successfully installed Docker. Now I will show some very basic Docker co
 
 This command allows you to search for Docker images by keyword. It queries the Docker Hub registry by default but can also be configured to search other registries. The results display relevant images along with their descriptions, ratings, and other metadata.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%203.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%203.png?raw=true)
 
 ### 2.2: Pulling an Image (`docker pull`):
 
 This command fetches Docker images from a registry, such as Docker Hub or a private registry. It downloads the specified image or images to your local machine, making them available for use in creating and running containers. If you don’t mention any version, it will download the latest version by default. Here I am pulling the Ubuntu image from Docker Hub.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%204.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%204.png?raw=true)
 
 ### 2.3: Show Existing Images (`docker images`):
 
 The `docker images` command is used to list all the Docker images that are currently downloaded or available locally on your system. It provides information such as the `repository`, `tag`, `image ID`, `creation date` and `size` for each image.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%205.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%205.png?raw=true)
 
 ### 2.4: Run a Container (`docker run`):
 
@@ -89,11 +89,11 @@ This command creates and starts a new Docker container based on a specified imag
 
 Here I am creating and running an Ubuntu container in an **Interactive** mode using `-it` with the command.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%206.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%206.png?raw=true)
 
 You can also run in **Detached** mode. When you run a container in detached mode (`-d`), it means that the container will run in the background, detached from your current terminal session. This allows you to continue using your terminal for other tasks while the container runs independently.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%207.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%207.png?raw=true)
 
 ### 2.5: List of all the Created Containers (`docker ps -a`)
 
@@ -101,7 +101,7 @@ The **`docker ps -a`** command is used to list all Docker containers, both runni
 
 When you run **`docker ps -a`**, you'll typically see output similar to the following:
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%208.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%208.png?raw=true)
 
 ### 2.6: List of all Running Containers (`docker ps`)
 
@@ -109,13 +109,13 @@ The `docker ps` command is used to list all the currently running Docker contain
 
 When you run `docker ps`, you'll typically see output similar to the following:
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%209.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%209.png?raw=true)
 
 ### 2.7: Restart a Container (`docker stop` & `docker start`)
 
 To restart a container, you need the `Container ID`. You can get the id using the `docker ps` command. Copy that id and use the `docker stop` command to stop the container from running. 
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2010.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2010.png?raw=true)
 
 Use the `docker start` command using the same id to start the container again.
 
@@ -125,7 +125,7 @@ Before creating a Dockerfile, first we have to know what a Dockerfile actually i
 
 **2.8.1: Create a Dockerfile and add instruction to it:**
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2011.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2011.png?raw=true)
 
 After writing instructions inside the Docker file, we have to build it using `sudo docker build -t debimg:1.0 .`
 
@@ -133,31 +133,31 @@ After writing instructions inside the Docker file, we have to build it using `su
 
 Now if you see the images, you will find the newly created image named `debimg` (for me) in the image list.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2012.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2012.png?raw=true)
 
 **2.8.3: Create a Container of that Image**
 
 Now, if you create a container using that Image Id of `debimg` image, the command will execute as we had written inside the docker file.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2013.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2013.png?raw=true)
 
 ### 2.9: **Committing Changes to an Image (`docker commit`)**:
 
 After making changes to a container, such as installing software or modifying files, this command creates a new image containing those changes. It effectively takes a snapshot of the container's filesystem and configuration at the current state. The resulting image can then be used to create new containers with the same configuration.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2014.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2014.png?raw=true)
 
 ### 2.10: **Removing a Container (`docker rm`)**:
 
 `docker rm` is used to remove one or more **stopped** containers from your system. When you no longer need a container, you can use this command to clean up disk space and resources. It permanently deletes the specified containers, freeing up resources for other uses.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2015.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2015.png?raw=true)
 
 ### 2.11: **Removing an Image (`docker rmi`)**:
 
 `docker rmi` is used to remove one or more Docker images from your local machine. It deletes the specified images, along with all their associated layers and metadata, freeing up disk space. This command is useful for cleaning up unused or outdated images to conserve storage resources.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2016.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2016.png?raw=true)
 
 # 3. Create a Docker Image using Dockerfile
 
@@ -165,7 +165,7 @@ Before creating a Dockerfile, first we have to know what a Dockerfile actually i
 
 ### **3.1: Create a Dockerfile and add instruction to it:**
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2011.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2011.png?raw=true)
 
 After writing instructions inside the Docker file, we have to build it using `sudo docker build -t debimg:1.0 .`
 
@@ -173,13 +173,13 @@ After writing instructions inside the Docker file, we have to build it using `su
 
 Now if you see the images, you will find the newly created image named `debimg` (for me) in the image list.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2012.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2012.png?raw=true)
 
 ### **3.3: Create a Container of that Image**
 
 Now, if you create a container using that Image Id of `debimg` image, the command will execute as we had written inside the docker file.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2013.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2013.png?raw=true)
 
 # 4. Run a container as a single task, show outputs, and show the status of all containers.
 
@@ -187,19 +187,19 @@ Now, if you create a container using that Image Id of `debimg` image, the comman
 
 After running the command, you will get a list of all the images are on your device.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2017.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2017.png?raw=true)
 
 ### 4.2: Run an Image
 
 Here I will run the Ubuntu image from here using the `sudo docker run -it ubuntu` to run the Ubuntu image in interactive mode.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2018.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2018.png?raw=true)
 
 ### 4.3: She the condition of the container
 
 Run the command `sudo docker ps -a` to see the condition of the container.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2019.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2019.png?raw=true)
 
 # 5. Run a container in iterative mode and install different packages in the container.
 
@@ -207,19 +207,19 @@ Run the command `sudo docker ps -a` to see the condition of the container.
 
 Here I will run the Ubuntu image from here using the `sudo docker run -it ubuntu` to run the Ubuntu image in interactive mode.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2020.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2020.png?raw=true)
 
 ### 5.2: Install `cmatrix`
 
 here `cmatrix` is not installed. So now, I will install `cmatrix` here.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2021.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2021.png?raw=true)
 
 ### 5.3: Run `cmatrix`
 
 Now run `cmatrix`:
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2022.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2022.png?raw=true)
 
 # 6: Database Container Management: Logging, Interaction, and SQL Query Showcase
 
@@ -227,25 +227,25 @@ Now run `cmatrix`:
 
 Execute the command `docker run -d --name mysql_container -e MYSQL_ROOT_PASSWORD=password mysql:latest` to run MySQL docker container in the background. `-d` here is used to run it in the background. I don’t have any MySQL image on my device. So, first it will pull it from `DockerHub` and then run.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2023.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2023.png?raw=true)
 
 ### 6.2: Show Logs of the Running Container
 
 To show logs of a running container in Docker, you can use the **`docker logs`** command followed by the container ID or name. Here's the general syntax:
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2024.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2024.png?raw=true)
 
 ### 6.3: Launch MySQL Container in Interactive Mode
 
 The command **`docker exec -it mysql_container bash`** lets you open up and interact with a Docker container called `mysql_container` as if it were a regular computer. 
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2025.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2025.png?raw=true)
 
 ### 6.4: Launch MySQL Client
 
 After running the MySQL docker in interactive mode, run the following command to launch the SQL client and run some SQL Queries:
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2026.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2026.png?raw=true)
 
 # 7. Push your own image to Docker Hub
 
@@ -255,19 +255,19 @@ Pushing your Docker image to Docker Hub is like uploading a photo to the interne
 
 I am not going to explain it here. I think you can do it by your own. It’s super easy.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2027.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2027.png?raw=true)
 
 ### 7.2: Choose Which Image You Want to
 
 In the 3rd section of this blog, I had created an image named `debimg`. Which is basically a modified image of the `ubuntu` image. I will push that image into Docker Hub.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2017.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2028.png?raw=true)
 
 ### 7.3: Assign a New Tag
 
 The **`docker tag`** command is used to assign a new name and/or a new tag to an existing Docker image. This command is particularly useful when you want to prepare an image for publishing to a Docker registry like Docker Hub.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2028.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2029.png?raw=true)
 
 ### 7.4:  Sign in to your Docker Account through CLI
 
@@ -275,25 +275,25 @@ Next, you'll need to sign in to your Docker account using the command line. To d
 
 **7.4.1: Generate a PAT**
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2029.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2029.png?raw=true)
 
 **7.4.2: Sign in to Docker from CLI:**
 
 Use the previously generated PAT as the password to sign in.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2030.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2030.png?raw=true)
 
 ### **7.5: Push the Image**
 
 `docker tag my_image myusername/my_repo:latest` use this format while pushing.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2031.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2031.png?raw=true)
 
 ### 7.6: Check on Docker Hub
 
 After the image has been successfully pushed, check your Docker Hub repository section to verify whether or not the image is showing there.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2032.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2032.png?raw=true)
 
 # 8. Make Your Own Private Registry
 
@@ -309,7 +309,7 @@ sudo apt install docker-compose apache2-utils
 
 You can run the Docker Registry as a container using the following command:
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2033.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2033.png?raw=true)
 
 ### 8.3: Tag and Push into Private Repository
 
@@ -320,7 +320,7 @@ docker tag test_ubuntu localhost:5000/test_ubuntu
 docker push localhost:5000/test_ubuntu
 ```
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2034.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2034.png?raw=true)
 
 # 9. Create a Dockized Website
 
@@ -330,7 +330,7 @@ Here are the steps to create a small website with minimal functionality (a simpl
 
 First, let's create a directory to organize our project files. We'll name it `docker_website` for clarity. This directory will contain all the files related to our Dockized website.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2035.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2035.png?raw=true)
 
 ### 9.2: Create Necessary Files
 
@@ -340,7 +340,7 @@ HTML File (**`index.html`**)
 
 We'll create a basic HTML file with a button that, when clicked, opens a static image.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2036.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2036.png?raw=true)
 
 Image File (**`image.jpg`**)
 
@@ -350,7 +350,7 @@ We'll also need an image file for the button to open. You can use any image you 
 
 A Dockerfile is a text file that contains instructions for building a Docker image. In our case, we'll use the official Nginx image as our base image and copy our HTML and image files into it.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2037.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2037.png?raw=true)
 
 This Dockerfile specifies that we'll use the **`nginx:alpine`** image as our base, and then copy all the files from the current directory (**`.`**) into the **`/usr/share/nginx/html`** directory inside the container.
 
@@ -358,13 +358,13 @@ This Dockerfile specifies that we'll use the **`nginx:alpine`** image as our bas
 
 With our Dockerfile in place, we can now build our Docker image using the **`docker build`** command. We'll tag our image with the name **`docker_website`**.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2038.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2038.png?raw=true)
 
 ### 9.5: Run the Docker Container
 
 Now that we have our Docker image built, we can run it as a Docker container. We'll use the **`docker run`** command to do this. We'll also map port **`8080`** on our host machine to port **`80`** inside the container, where Nginx is listening by default.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2039.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2039.png?raw=true)
 
 The **`-d`** flag tells Docker to run the container in detached mode (in the background), and the **`-p`** flag maps port **`8080`** on the host to port **`80`** on the container.
 
@@ -372,7 +372,7 @@ The **`-d`** flag tells Docker to run the container in detached mode (in the bac
 
 Finally, we can access our website by opening a web browser and navigating to **`http://localhost:8080`**. You should see the welcome message and a button. Clicking the button should open the image in a new tab.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2040.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2040.png?raw=true)
 
 That's it! You've successfully created a simple website with minimal functionality inside a Docker container and accessed it from your host machine. Feel free to customize and extend this example to suit your needs. Happy coding!
 
@@ -382,7 +382,7 @@ That's it! You've successfully created a simple website with minimal functionali
 
 The first step is to upload your container image to Docker Hub. Ensure you have an account on Docker Hub and login using the `docker login` command in your terminal or command prompt. Next, tag your existing container image with your Docker Hub username and repository name and push:
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2041.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2041.png?raw=true)
 
 ### 10.2: Pull the Container on Another Machine
 
@@ -398,7 +398,7 @@ This command fetches the container image from Docker Hub to your local machine, 
 
 After containerizing the Image, we'll use the **`docker run`** command to do this. We'll also map port **`8080`** on our host machine to port **`80`** inside the container, where Nginx is listening by default.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2039.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2039.png?raw=true)
 
 The **`-d`** flag tells Docker to run the container in detached mode (in the background), and the **`-p`** flag maps port **`8080`** on the host to port **`80`** on the container.
 
@@ -406,4 +406,4 @@ The **`-d`** flag tells Docker to run the container in detached mode (in the bac
 
 Finally, we can access our website by opening a web browser and navigating to **`http://localhost:8080`**. You should see the welcome message and a button. Clicking the button should open the image in a new tab.
 
-![Untitled](Docker%20101%205c344ab78a1a4a4a9f1923a7efbfb8d2/Untitled%2040.png)
+![Untitled](https://github.com/debjotyms/blog-posts/blob/main/DevOps/resources/Docker%20101/Untitled%2040.png?raw=true)
